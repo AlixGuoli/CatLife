@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cat VPN</string>
+    <string name="share">Share</string>
+    <string name="telegram">Telegram</string>
+    <string name="hint_click">点击任意位置切换状态</string>
+<!--    <string name="hint_click">Click anywhere to switch the state</string>-->
+</resources>

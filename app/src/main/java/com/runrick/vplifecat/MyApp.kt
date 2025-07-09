@@ -13,11 +13,14 @@ import com.elvishew.xlog.formatter.stacktrace.DefaultStackTraceFormatter
 import com.elvishew.xlog.formatter.thread.DefaultThreadFormatter
 import com.elvishew.xlog.printer.AndroidPrinter
 import com.elvishew.xlog.printer.Printer
+import com.google.android.gms.ads.MobileAds
 import com.hjq.language.MultiLanguages
+import com.runrick.vplifecat.ads.AdsManager
 import com.runrick.vplifecat.base.AppHelper
 import com.runrick.vplifecat.base.VPXLogFormatter
 import com.runrick.vplifecat.ui.BackActivity
 import com.runrick.vplifecat.ui.SplashActivity
+import com.tencent.mmkv.MMKV
 
 /**
  * @Description:
@@ -33,7 +36,7 @@ class MyApp: Application(), Application.ActivityLifecycleCallbacks {
         private lateinit var instance: MyApp
         var isBack = false
 
-        fun getInstance(): MyApp {
+        fun getApp(): MyApp {
             return instance
         }
     }
@@ -44,6 +47,8 @@ class MyApp: Application(), Application.ActivityLifecycleCallbacks {
         registerActivityLifecycleCallbacks(this)
         AppHelper.init(this)
         MultiLanguages.init(this)
+        MMKV.initialize(this)
+        MobileAds.initialize(this) {}
         initXLog()
     }
 
@@ -54,7 +59,9 @@ class MyApp: Application(), Application.ActivityLifecycleCallbacks {
     override fun onActivityStarted(activity: Activity) {
         currentActivity = activity
         if (isBack) {
-            activity.startActivity(Intent(activity, BackActivity::class.java))
+            if (isCanShow()) {
+                activity.startActivity(Intent(activity, BackActivity::class.java))
+            }
         }
         count++
         isBack = false
@@ -81,6 +88,10 @@ class MyApp: Application(), Application.ActivityLifecycleCallbacks {
 
     override fun onActivityDestroyed(activity: Activity) {
 
+    }
+
+    fun isCanShow(): Boolean {
+        return (AdsManager.checkCacheAd(AdsManager.AD_TYPE_INTER) && !AdsManager.isIntShowing)
     }
 
     fun initXLog() {

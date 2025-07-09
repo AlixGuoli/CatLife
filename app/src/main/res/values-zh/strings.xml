@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cat VPN</string>
+    <string name="share">分享</string>
+    <string name="telegram">Telegram</string>
+    <string name="hint_click">点击任意位置切换状态</string>
+    <string name="disconnected">未连接</string>
+    <string name="connected">已连接</string>
+    <string name="connecting">正在连接中</string>
+    <string name="setting">设置</string>
+    <string name="setting_Speed">速度</string>
+    <string name="setting_Speed_Test">速度测试</string>
+    <string name="setting_Location">位置</string>
+    <string name="setting_information">信息</string>
+    <string name="setting_System_Info">系统信息</string>
+    <string name="setting_Availability">可用性</string>
+    <string name="setting_Language">语言</string>
+    <string name="setting_Version_Update">版本更新</string>
+    <string name="setting_Rate_us">给我们评分</string>
+    <string name="setting_Switch_Mod">切换模式</string>
+    <string name="setting_Interface_style">界面风格</string>
+    <string name="setting_Feedback">反馈</string>
+    <string name="setting_Share">分享</string>
+    <string name="setting_Privacy">隐私协议</string>
+    <string name="setting_About">关于</string>
+    <string name="setting_Legal">法律信息</string>
+    <string name="setting_Help">帮助与支持</string>
+
+    <string name="country">国家/地区</string>
+
+    <string name="permission_battery_title">允许后台运行</string>
+    <string name="permission_battery_msg">为了提供更好的服务，我们需要您授予电池优化权限</string>
+</resources>

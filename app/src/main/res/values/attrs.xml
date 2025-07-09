@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingItem">
+        <attr name="title" format="string" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="RateStar">
+        <attr name="starSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starFilled" format="reference" />
+        <attr name="starEmpty" format="reference" />
+    </declare-styleable>
+
+</resources>

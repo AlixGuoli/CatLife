@@ -1,23 +1,24 @@
 package com.runrick.vplifecat.ui
 
 import android.content.Intent
-import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.gyf.immersionbar.ImmersionBar
-import com.runrick.vplifecat.R
+import com.blankj.utilcode.util.SPUtils
+import com.elvishew.xlog.XLog
+import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import com.runrick.vplifecat.ads.AdsManager
 import com.runrick.vplifecat.base.BaseActivity
 import com.runrick.vplifecat.base.BaseViewModel
 import com.runrick.vplifecat.databinding.ActivitySplashBinding
+import com.runrick.vplifecat.utils.AppKey
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.util.UUID
 
 class SplashActivity : BaseActivity<ActivitySplashBinding, BaseViewModel>() {
 
-    var time = 3 * 1000L
+    var time = 2 * 1000L
     private var timer: CountDownTimer? = null
 
     override fun getViewBinding(): ActivitySplashBinding {
@@ -29,9 +30,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, BaseViewModel>() {
     }
 
     override fun initUI() {
-        ImmersionBar.with(this)
-            .transparentStatusBar()
-            .init()
+        loadData()
 
         timer = object : CountDownTimer(time, 200) {
             override fun onTick(millisUntilFinished: Long) {
@@ -40,6 +39,9 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, BaseViewModel>() {
 
             override fun onFinish() {
                 next()
+                if (AdsManager.mInterstitialAd != null) {
+                    AdsManager.showIntAd(this@SplashActivity)
+                }
             }
         }
 
@@ -50,6 +52,36 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, BaseViewModel>() {
 
     override fun onClick() {
 
+    }
+
+    private fun loadData() {
+        lifecycleScope.launch {
+            AdsManager.loadIntAd(this@SplashActivity)
+            withContext(Dispatchers.IO) {
+                newUser()
+            }
+            timer?.start()
+        }
+    }
+
+    private fun newUser() {
+        try {
+            var uuid = SPUtils.getInstance().getString(AppKey.KEY_USER_ID)
+            //XLog.e("user_id ${uuid}")
+            if (uuid.isNullOrEmpty()) {
+                val adInfo = AdvertisingIdClient.getAdvertisingIdInfo(this)
+                uuid = if (!adInfo.id.isNullOrEmpty()) {
+                    XLog.e("user_id ${adInfo.id}")
+                    adInfo.id
+                } else {
+                    UUID.randomUUID().toString()
+                }
+                SPUtils.getInstance().put(AppKey.KEY_USER_ID, uuid)
+            }
+        } catch (e: Exception) {
+            var uuid = UUID.randomUUID().toString()
+            SPUtils.getInstance().put(AppKey.KEY_USER_ID, uuid)
+        }
     }
 
     private fun next() {

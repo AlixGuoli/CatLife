@@ -1,7 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cat VPN</string>
     <string name="share">Share</string>
     <string name="telegram">Telegram</string>
-    <string name="hint_click">点击任意位置切换状态</string>
-<!--    <string name="hint_click">Click anywhere to switch the state</string>-->
+    <string name="hint_click">Click anywhere to switch the state</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting</string>
+    <string name="connection_successful">Connection Successful</string>
+    <string name="stopping">Stopping</string>
+    <string name="setting">Setting</string>
+    <string name="setting_Speed">Speed</string>
+    <string name="setting_Speed_Test">Speed Test</string>
+    <string name="setting_Location">Location</string>
+    <string name="setting_information">Information</string>
+    <string name="setting_System_Info">System Info</string>
+    <string name="setting_Availability">Availability</string>
+    <string name="setting_Language">Language</string>
+    <string name="setting_Version_Update">Version Update</string>
+    <string name="setting_Rate_us">Rate us</string>
+    <string name="setting_Switch_Mod">Switch Mode</string>
+    <string name="setting_Interface_style">Interface style</string>
+    <string name="setting_Feedback">Feedback</string>
+    <string name="setting_Share">Share</string>
+    <string name="setting_Privacy">Privacy Agreement</string>
+    <string name="setting_About">About</string>
+    <string name="setting_Legal">Legal Information</string>
+    <string name="setting_Help">Help &amp; Support</string>
+
+    <string name="country">Country</string>
+
+    <string name="permission_battery_title">Allow background running</string>
+    <string name="permission_battery_msg">In order to provide better service, we need you to grant battery optimization permissions</string>
+
+    <string name="server">Server</string>
+
+    <string name="toast_services_start">Start Services</string>
+    <string name="toast_services_stop">Stop Services</string>
+    <string name="toast_services_success">Start Services Success</string>
+    <string name="toast_services_failure">Start Services Failure</string>
+    <string name="toast_warning_pref_proxysharing_short">Allow connections from the LAN, Make sure you are in a trusted network</string>
+
+    <string name="btn_share_title">Tell Friends</string>
+    <string name="btn_share_hint">Love our app? Share it and invite your friends!</string>
+
+    <string name="btn_tg_title">Follow Us</string>
+    <string name="btn_tg_hint">Stay updated! Subscribe to our Telegram channel now!</string>
+    <string name="close">Close</string>
+
+    <string name="dialog_disconnect">Are you sure you want to disconnect?</string>
+
+    <string name="dialog_failed">CONNECTION FAILED</string>
+    <string name="support">Support</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+
+    <string name="rate_title">Evaluate Connection Quality</string>
+    <string name="great">Great</string>
+    <string name="rate_hint">Your feedback and support help us improve constantly.</string>
+    <string name="toast_not_rate">Not rated yet</string>
 </resources>

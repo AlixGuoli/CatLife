@@ -9,6 +9,6 @@ class CountryBean(
     val country: String,
     val language: String,
     val name: String,
-    var selected: Boolean = false
+    var isSelect: Boolean = false
 ) {
 }

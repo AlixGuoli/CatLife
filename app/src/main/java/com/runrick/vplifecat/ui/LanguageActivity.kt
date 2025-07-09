@@ -1,21 +1,80 @@
 package com.runrick.vplifecat.ui
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.runrick.vplifecat.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.hjq.language.MultiLanguages
+import com.runrick.vplifecat.adapter.LanguageAdapter
+import com.runrick.vplifecat.base.BaseActivity
+import com.runrick.vplifecat.base.BaseViewModel
+import com.runrick.vplifecat.bean.CountryBean
+import com.runrick.vplifecat.databinding.ActivityLanguageBinding
+import java.util.Locale
 
-class LanguageActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_language)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+class LanguageActivity : BaseActivity<ActivityLanguageBinding, BaseViewModel>() {
+
+    private val adapter by lazy {
+        LanguageAdapter()
+    }
+
+    override fun getViewBinding(): ActivityLanguageBinding {
+        return ActivityLanguageBinding.inflate(layoutInflater)
+    }
+
+    override fun getViewModelClass(): Class<BaseViewModel> {
+        return BaseViewModel::class.java
+    }
+
+    override fun initUI() {
+
+        binding.recyclerview.layoutManager = LinearLayoutManager(this)
+        binding.recyclerview.adapter = adapter
+
+        val currentLanguage = MultiLanguages.getAppLanguage()
+        val list = mutableListOf<CountryBean>()
+
+        val de = CountryBean("DE", "de", "Deutsch")
+        val en = CountryBean("GB", "en", "English")
+        val es = CountryBean("ES", "es", "Español")
+        val fr = CountryBean("FR", "fr", "Français")
+        val in_ = CountryBean("ID", "in", "indonesia")
+        val ja = CountryBean("JP", "ja", "日本語")
+        val ko = CountryBean("KR", "ko", "한국어")
+        val pt = CountryBean("PT", "pt", "Português")
+        val ru = CountryBean("RU", "ru", "Русский")
+        val zh = CountryBean("CN", "zh", "简体中文")
+
+        list.add(de)
+        list.add(en)
+        list.add(es)
+        list.add(fr)
+        list.add(in_)
+        list.add(ja)
+        list.add(ko)
+        list.add(pt)
+        list.add(ru)
+        list.add(zh)
+
+        list.find {
+            it.language == currentLanguage.language
+        }?.isSelect = true
+
+        adapter.data = list
+        adapter.notifyDataSetChanged()
+    }
+
+    override fun onClick() {
+        binding.back.setOnClickListener {
+            finish()
+        }
+
+        adapter.setOnItemClickListener { _, _, position ->
+            val item = adapter.getItem(position)
+            adapter.setAll(false)
+            item.isSelect = true
+            adapter.notifyDataSetChanged()
+            item.let {
+                MultiLanguages.setAppLanguage(this, Locale(it.language))
+                finish()
+            }
         }
     }
 }

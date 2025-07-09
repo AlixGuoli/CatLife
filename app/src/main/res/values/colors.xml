@@ -13,4 +13,12 @@
     <color name="yellow30">#4DFBB828</color>
     <color name="blue">#64C1F5</color>
     <color name="blue30">#4D64C1F5</color>
+    <color name="color_94949A">#94949A</color>
+    <color name="color_CFCFD0">#CFCFD0</color>
+    <color name="color_3E3E4A">#3E3E4A</color>
+
+    <color name="color_52B6FF">#52B6FF</color>
+    <color name="color_292936">#292936</color>
+
+    <color name="color_999999">#999999</color>
 </resources>

@@ -1,14 +1,8 @@
 package com.runrick.vplifecat.ui
 
-import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.gyf.immersionbar.ImmersionBar
-import com.runrick.vplifecat.R
+import com.runrick.vplifecat.ads.AdsManager
 import com.runrick.vplifecat.base.BaseActivity
 import com.runrick.vplifecat.base.BaseViewModel
 import com.runrick.vplifecat.databinding.ActivityBackBinding
@@ -28,14 +22,15 @@ class BackActivity : BaseActivity<ActivityBackBinding, BaseViewModel>() {
     }
 
     override fun initUI() {
-        ImmersionBar.with(this).transparentStatusBar().init()
 
-        timer = object : CountDownTimer(time, 200) {
+
+        timer = object : CountDownTimer(time, 10) {
             override fun onTick(millisUntilFinished: Long) {
-
+                binding.progress.progress = (time/10 /2 - (millisUntilFinished / 10L)).toInt()
             }
 
             override fun onFinish() {
+                AdsManager.showIntAd(this@BackActivity)
                 finish()
             }
         }

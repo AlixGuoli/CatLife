@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Cat VPN</string>
+    <string name="share">Share</string>
+    <string name="telegram">Telegram</string>
+    <string name="hint_click">Click anywhere to switch the state</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting</string>
+    <string name="setting">Setting</string>
+    <string name="setting_Speed">Speed</string>
+    <string name="setting_Speed_Test">Speed Test</string>
+    <string name="setting_Location">Location</string>
+    <string name="setting_information">Information</string>
+    <string name="setting_System_Info">System Info</string>
+    <string name="setting_Availability">Availability</string>
+    <string name="setting_Language">Language</string>
+    <string name="setting_Version_Update">Version Update</string>
+    <string name="setting_Rate_us">Rate us</string>
+    <string name="setting_Switch_Mod">Switch Mode</string>
+    <string name="setting_Interface_style">Interface style</string>
+    <string name="setting_Feedback">Feedback</string>
+    <string name="setting_Share">Share</string>
+    <string name="setting_Privacy">Privacy Agreement</string>
+    <string name="setting_About">About</string>
+    <string name="setting_Legal">Legal Information</string>
+    <string name="setting_Help">Help &amp; Support</string>
+
+    <string name="country">Country</string>
+
+    <string name="permission_battery_title">Allow background running</string>
+    <string name="permission_battery_msg">In order to provide better service, we need you to grant battery optimization permissions</string>
+</resources>

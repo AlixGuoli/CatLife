@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
+import com.gyf.immersionbar.ImmersionBar
 
 /**
  * @Description:
@@ -23,6 +24,7 @@ abstract class BaseActivity<VB : ViewBinding, VM : BaseViewModel> : AppCompatAct
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ImmersionBar.with(this).transparentStatusBar().init()
         binding = getViewBinding()
         setContentView(binding.root)
         viewModel = ViewModelProvider(this)[getViewModelClass()]

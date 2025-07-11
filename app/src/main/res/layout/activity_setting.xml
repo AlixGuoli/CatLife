@@ -22,7 +22,7 @@
             android:layout_centerVertical="true"
             android:src="@mipmap/back" />
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -42,7 +42,7 @@
             android:orientation="vertical"
             android:paddingBottom="@dimen/dp_20">
 
-            <com.runrick.vplifecat.custom.MediumText
+            <com.speed.domain.catlifevpn.custom.MediumText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/dp_20"
@@ -50,19 +50,19 @@
                 android:textColor="@color/color_CFCFD0"
                 android:textSize="@dimen/sp_12" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_speed"
                 app:title="@string/setting_Speed_Test" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_location"
                 app:title="@string/setting_Location" />
 
-            <com.runrick.vplifecat.custom.MediumText
+            <com.speed.domain.catlifevpn.custom.MediumText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_15"
@@ -71,19 +71,19 @@
                 android:textColor="@color/color_CFCFD0"
                 android:textSize="@dimen/sp_12" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_system"
                 app:title="@string/setting_System_Info" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_availability"
                 app:title="@string/setting_Availability" />
 
-            <com.runrick.vplifecat.custom.MediumText
+            <com.speed.domain.catlifevpn.custom.MediumText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_15"
@@ -92,39 +92,39 @@
                 android:textColor="@color/color_CFCFD0"
                 android:textSize="@dimen/sp_12" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:id="@+id/language"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_language"
                 app:title="@string/setting_Language" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_version"
                 app:title="@string/setting_Version_Update" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:id="@+id/rateUs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_rate"
                 app:title="@string/setting_Rate_us" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_mode"
                 app:title="@string/setting_Switch_Mod" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_interface"
                 app:title="@string/setting_Interface_style" />
 
-            <com.runrick.vplifecat.custom.MediumText
+            <com.speed.domain.catlifevpn.custom.MediumText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_15"
@@ -133,37 +133,37 @@
                 android:textColor="@color/color_CFCFD0"
                 android:textSize="@dimen/sp_12" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_feedback"
                 app:title="@string/setting_Feedback" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_share"
                 app:title="@string/setting_Share" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_privacy"
                 app:title="@string/setting_Privacy" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_about"
                 app:title="@string/setting_About" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_legal"
                 app:title="@string/setting_Legal" />
 
-            <com.runrick.vplifecat.custom.SettingItem
+            <com.speed.domain.catlifevpn.custom.SettingItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:icon="@mipmap/setting_help"

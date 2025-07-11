@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -83,7 +83,7 @@
 
     </LinearLayout>
 
-    <com.runrick.vplifecat.custom.MediumText
+    <com.speed.domain.catlifevpn.custom.MediumText
         android:id="@+id/btnClose"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"

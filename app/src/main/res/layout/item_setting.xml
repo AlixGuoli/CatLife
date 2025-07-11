@@ -12,7 +12,7 @@
         android:layout_height="@dimen/dp_24"
         android:src="@mipmap/setting_about"/>
 
-    <com.runrick.vplifecat.custom.MediumText
+    <com.speed.domain.catlifevpn.custom.MediumText
         android:id="@+id/title"
         android:layout_marginHorizontal="@dimen/dp_18"
         android:layout_width="0dp"

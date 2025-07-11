@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageRate" />
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:id="@+id/text2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text1" />
 
-        <com.runrick.vplifecat.custom.RatingStarView
+        <com.speed.domain.catlifevpn.custom.RatingStarView
             android:id="@+id/ratingView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

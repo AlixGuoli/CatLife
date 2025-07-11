@@ -153,7 +153,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/lottie"
         app:layout_constraintTop_toTopOf="@+id/lottie">
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:id="@+id/connectTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent">-->
 
-<!--        <com.runrick.vplifecat.custom.MediumText-->
+<!--        <com.speed.domain.catlifevpn.custom.MediumText-->
 <!--            android:id="@+id/connectTime"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->

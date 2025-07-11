@@ -45,7 +45,7 @@
         android:layout_marginBottom="@dimen/dp_17"
         android:orientation="horizontal">
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:id="@+id/btnCancel"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -56,7 +56,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/sp_16" />
 
-        <com.runrick.vplifecat.custom.MediumText
+        <com.speed.domain.catlifevpn.custom.MediumText
             android:id="@+id/btnYes"
             android:layout_width="0dp"
             android:layout_height="match_parent"
